@@ -11,5 +11,20 @@ body {
 	max-width: 1310px;
 	margin: 0 auto;
 	padding: 0 15px;
-	font-family: 'Bebas';
+}
+
+.btn {
+	color: $white-color;
+	background: $orange-color;
+	text-align: center;
+	padding: 18px 30px;
+	cursor: pointer;
+	font-size: 0.9rem;
+	transition: background .2s;
+	&:hover {
+		background: $hover-orange-color;
+	}
+	&:active {
+		background: $active-orange-color;
+	}
 }

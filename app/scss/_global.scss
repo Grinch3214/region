@@ -13,6 +13,10 @@ body {
 	padding: 0 15px;
 }
 
+.lock {
+	overflow: hidden;
+}
+
 .btn {
 	color: $white-color;
 	background: $orange-color;
@@ -26,5 +30,8 @@ body {
 	}
 	&:active {
 		background: $active-orange-color;
+	}
+	@media (max-width: 790px) {
+		font-size: 0.7em;
 	}
 }

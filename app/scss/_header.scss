@@ -1,10 +1,37 @@
 // !Isolated header component
 .header {
 	position: fixed;
+	z-index: 10;
 	top: 0;
 	left: 0;
 	right: 0;
 	padding: 25px 0;
+	transition: all .2s;
+	@media (max-width: 1100px) {
+		padding: 5px 0;
+	}
+
+	&.active, &.show {
+		background: rgba(0,0,0, .8);
+		padding: 5px 0;
+		&::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: rgba(0,0,0, .6);
+			z-index: -1;
+		}
+	}
+
+	&.show {
+		&::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: #000;
+			z-index: 10;
+		}
+	}
 
 	&__container {
 		display: flex;
@@ -13,14 +40,45 @@
 	}
 
 	&__logo {
+		width: 76px;
+		height: 111px;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+		@media (max-width: 1100px) {
+			width: 59px;
+			height: 85px;
+			position: relative;
+			z-index: 15;
+		}
 	}
 
 	&__nav {
+		@media (max-width: 1100px) {
+			display: none;
+		}
+		&.active {
+			@media (max-width: 1100px) {
+				display: block;
+				position: fixed;
+				z-index: 5;
+				inset: 0;
+				background: linear-gradient(200deg, rgba(201, 86, 0, 0.20) 0%, rgba(201, 86, 0, 0.00) 100%), linear-gradient(149deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.00) 100%), #C95600;
+				padding: 120px 15px 30px;
+				overflow: auto;
+			}
+		}
 	}
 
 	&__list {
 		display: flex;
 		gap: 30px;
+		@media (max-width: 1100px) {
+			flex-flow: column;
+			align-items: center;
+			gap: 5px;
+		}
 	}
 
 	&__item {
@@ -43,6 +101,9 @@
 			height: 2px;
 			background: transparent;
 			transition: background .2s;
+			@media (max-width: 1100px) {
+				height: 0;
+			}
 		}
 		&.active::before {
 			background: $white-color;
@@ -51,6 +112,51 @@
 			color: $hover-orange-color;
 			&::before {
 				background: $hover-orange-color;
+			}
+		}
+	}
+
+	&__burger {
+		display: none;
+		cursor: pointer;
+		@media (max-width: 1100px) {
+			display: block;
+			width: 34px;
+			height: 34px;
+			position: relative;
+			z-index: 15;
+			&::before, &::after, span {
+				transition: transform .2s;
+				content: '';
+				position: absolute;
+				height: 2px;
+				background: #fff;
+				left: 4px;
+				right: 4px;
+				top: 6px;
+			}
+			&::after {
+				top: auto;
+				bottom: 6px;
+			}
+			span {
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+		&.active {
+			@media (max-width: 1100px) {
+				&::before, &::after {
+					transform: rotate(45deg);
+					top: 17px;
+				}
+				&::after {
+					transform: rotate(-45deg);
+					bottom: 14px;
+				}
+				span {
+					display: none;
+				}
 			}
 		}
 	}
@@ -63,6 +169,10 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	min-height: 100vh;
+	overflow: hidden;
+	@media (max-width: 420px) {
+		padding: 135px 0 50px;
+	}
 
 	&>.container {
 		position: relative;
@@ -70,18 +180,44 @@
 		display: flex;
     flex-flow: column;
     justify-content: center;
+		@media (max-width: 420px) {
+			min-height: calc(100vh - 185px);
+		}
 	}
 
 	&__image {
 		position: absolute;
 		bottom: -80px;
 		right: 0;
+		width: 960px;
+		height: 662px;
+		pointer-events: none;
+		@media (max-width: 1100px) {
+			width: 660px;
+			height: 462px;
+		}
+		@media (max-width: 865px) {
+			right: -150px;
+		}
+		@media (max-width: 790px) {
+			width: 560px;
+			height: 362px;
+		}
+		@media (max-width: 420px) {
+			width: 460px;
+			height: 292px;
+		}
 	}
 
 	&__content {
+		@media (max-width: 790px) {
+			display: flex;
+			flex-flow: column;
+		}
 	}
 
 	&__title {
+		order: 2;
 		font-family: 'Bebas';
 		font-weight: 400;
 		text-transform: uppercase;
@@ -90,14 +226,54 @@
 		color: $white-color;
 		display: flex;
 		justify-content: space-between;
+		flex-flow: wrap;
+		@media (max-width: 1100px) {
+			justify-content: center;
+		}
+		@media (max-width: 790px) {
+			font-size: 9rem;
+			line-height: 8rem;
+			flex-flow: column;
+		}
+		@media (max-width: 420px) {
+			font-size: 7.5rem;
+				line-height: 7rem;
+				align-items: center;
+		}
+		span {
+			@media (max-width: 420px) {
+				margin-right: 50px;
+				align-self: flex-end;
+			}
+		}
 	}
 
 	&__text {
+		order: 1;
 		color: $white-color;
 		font-size: 1.7rem;
 		line-height: 2.2rem;
 		max-width: 460px;
 		margin-bottom: 30px;
+		position: relative;
+		padding-left: 32px;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 8px;
+			height: 42px;
+			background: $orange-color;
+			@media (max-width: 790px) {
+				height: 100%;
+			}
+		}
+		@media (max-width: 790px) {
+			font-size: 1.2rem;
+			line-height: 1.4rem;
+			max-width: 305px;
+		}
 
 		span {
 			font-weight: 700;
@@ -110,5 +286,13 @@
 
 	&__button {
 		min-width: 292px;
+		margin-left: 32px;
+		@media (max-width: 790px) {
+			position: relative;
+			order: 3;
+			min-width: auto;
+			max-width: 227px;
+			margin-left: 0;
+		}
 	}
 }

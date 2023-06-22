@@ -31,4 +31,7 @@ body {
 	&:active {
 		background: $active-orange-color;
 	}
+	@media (max-width: 790px) {
+		font-size: 0.7em;
+	}
 }

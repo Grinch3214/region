@@ -17,3 +17,22 @@
 		}
 	})
 })();
+
+// burger menu
+(() => {
+	const html = document.querySelector('html')
+	const burgerMenu = document.querySelector('.header__burger')
+	const header = document.querySelector('.header')
+	const navigation = document.querySelector('.header__nav')
+
+	const toggleClassOnClick = (selector, nameclass) => {
+		selector.classList.toggle(`${nameclass}`)
+	}
+
+	burgerMenu.addEventListener('click', () => {
+		toggleClassOnClick(html, 'lock')
+		toggleClassOnClick(burgerMenu, 'active')
+		toggleClassOnClick(header, 'show')
+		toggleClassOnClick(navigation, 'active')
+	})
+})();

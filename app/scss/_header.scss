@@ -5,6 +5,20 @@
 	left: 0;
 	right: 0;
 	padding: 25px 0;
+	transition: all .2s;
+
+	&.active {
+		background: rgba(0,0,0, .8);
+		padding: 5px 0;
+		&::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: rgba(0,0,0, .6);
+			filter: blur(5px);
+			z-index: -1;
+		}
+	}
 
 	&__container {
 		display: flex;

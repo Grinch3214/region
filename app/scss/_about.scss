@@ -1,0 +1,96 @@
+.about {
+	padding: 140px 0;
+
+	.container {
+		display: flex;
+		gap: 52px;
+	}
+	&__box {
+		flex: 1 1 48%;
+		height: 585px;
+		background-image: url('../images/about_bg.jpg');
+		background-position: 50% 50%;
+		background-size: cover;
+		position: relative;
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-end;
+		&::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: rgba($orange-color, .6);
+		}
+	}
+
+	&__format {
+		position: relative;
+		z-index: 5;
+		max-width: 277px;
+		width: 100%;
+		padding: 80px 0;
+		background: $dark-color;
+		text-align: center;
+		margin-bottom: -50px;
+		span {
+			display: inline-block;
+			color: $white-color;
+			background: rgba($orange-color, .7);
+			padding: 4px 30px 7px;
+			font-size: 1.8rem;
+			position: relative;
+			&::before, &::after {
+				content: '8X8';
+				font-size: 3rem;
+				font-weight: 700;
+				color: $darkgray-color;
+				position: absolute;
+				z-index: -1;
+				top: -98%;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			&::after {
+				content: '5X5';
+				top: auto;
+				bottom: -98%;
+			}
+		}
+	}
+
+	&__inner {
+		flex: 1 1 48%;
+	}
+
+	&__title {
+		margin-bottom: 60px;
+	}
+
+	&__list {
+		line-height: 1.5rem;
+	}
+
+	&__item {
+		padding-left: 30px;
+		margin-bottom: 20px;
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 12px;
+			left: 0;
+			width: 6px;
+			height: 6px;
+			background: $dark-color;
+			border-radius: 50%;
+		}
+		span {
+			font-weight: 700;
+		}
+	}
+
+	&__btn {
+		max-width: 292px;
+		width: 100%;
+	}
+}

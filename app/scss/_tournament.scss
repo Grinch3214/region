@@ -29,6 +29,9 @@
 		&:last-child {
 			margin-bottom: 0;
 		}
+		@media (max-width: 790px) {
+			margin-bottom: 10px;
+		}
 	}
 
 	&__accordion-title {

@@ -1,18 +1,25 @@
 .sponsors {
-	padding: 0 0 140px;
+	padding: 140px 0 0;
 	line-height: 1.5rem;
 	color: $white-color;
 	overflow: hidden;
+	@media (max-width: 1100px) {
+		padding: 140px 0 0;
+	}
 
 	@media (max-width: 790px) {
+		padding: 80px 0 0;
 		font-size: 0.7rem;
 		line-height: 0.9rem;
-		padding: 0 0 80px;
 	}
 
 	&__container {
 		display: flex;
 		align-items: center;
+		@media (max-width: 1100px) {
+			display: block;
+			background: $dark-color;
+		}
 	}
 
 	&__inner {
@@ -23,6 +30,21 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		position: relative;
+		@media (max-width: 1200px) {
+			max-width: 580px;
+			padding: 80px 50px;
+		}
+		@media (max-width: 1100px) {
+			max-width: 620px;
+			margin: 0 auto;
+			top: -50px;
+		}
+		@media (max-width: 790px) {
+			top: -32px;
+		}
+		@media (max-width: 420px) {
+			padding: 32px;
+		}
 		&::before {
 			content: '';
 			position: absolute;
@@ -63,6 +85,10 @@
 		padding: 80px 0 38px 88px;
 		margin: 50px 0;
 		position: relative;
+		@media (max-width: 1100px) {
+			padding: 0 0 80px;
+			margin: 50px 0 0;
+		}
 		&::before {
 			content: '';
 			position: absolute;
@@ -71,6 +97,9 @@
 			margin-right: calc(-50vw + 640px);
 			@media (max-width: 1310px) {
 				margin-right: -15px;
+			}
+			@media (max-width: 1100px) {
+				margin: 0 -15px;
 			}
 		}
 	}

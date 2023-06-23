@@ -13,12 +13,14 @@
 		color: $white-color;
 		position: relative;
 		padding: 60px 0;
+		line-height: 1.5rem;
 		&::before {
 			content: '';
 			position: absolute;
 			z-index: -1;
 			inset: 0;
 			margin-left: calc(-50vw + 640px);
+			margin-right: 70px;
 			background: $dark-color;
 		}
 		form {
@@ -27,9 +29,15 @@
 	}
 
 	&__text {
+		margin-bottom: 32px;
 	}
 
 	&__group {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		> div {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__group-check {
@@ -42,9 +50,18 @@
 		position: absolute;
 		top: -224px;
 		right: 0;
-		width: 620px;
-		height: 640px;
-		background: #000;
+		max-width: 620px;
+		width: 100%;
+		background: linear-gradient(207deg, rgba(201, 86, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 100%), linear-gradient(50deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 100%), url('../images/partnership-form-bg.jpg'), 50% / cover no-repeat, #C95600;
+		padding: 80px 0;
+	}
+
+	&__container {
+		max-width: 425px;
+		margin: 0 auto;
+		>div {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__form-label {
@@ -55,11 +72,21 @@
 	}
 
 	&__form-checkbox {
-		input {}
+		input:checked + label::after {
+			top: 13px;
+		}
 
-		label {}
+		label {
+			font-size: 0.7rem;
+			color: $inputs-color;
+			&::before {
+				border-color: $white-color;
+				top: 6px;
+			}
+		}
 	}
 
 	&__form-btn {
+		width: 100%;
 	}
 }

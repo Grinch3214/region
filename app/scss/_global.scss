@@ -32,6 +32,9 @@ body {
 	&:active {
 		background: $active-orange-color;
 	}
+	&:disabled {
+		opacity: .5;
+	}
 	@media (max-width: 790px) {
 		font-size: 0.7em;
 	}
@@ -70,7 +73,10 @@ body {
 
 	label {
 		position: relative;
-		padding-left: 46px;
+		display: block;
+		padding: 2px 0 3px 46px;
+		line-height: 1rem;
+		cursor: pointer;
 		&::before {
 			content: '';
 			position: absolute;
@@ -117,8 +123,14 @@ body {
 		width: 100%;
 		border: 1px solid #FFF;
 		background: transparent;
+		transition: border-color .2s;
+		&:focus {
+			outline: 0;
+			border-color: $orange-color;
+			box-shadow: 0 0 2px 0 $orange-color;
+		}
 		&::placeholder {
-			
+			color: $light-gray;
 		}
 	}
 }

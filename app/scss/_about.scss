@@ -1,10 +1,28 @@
 .about {
 	padding: 140px 0;
+	@media (max-width: 790px) {
+		font-size: 0.7rem;
+		line-height: 0.9rem;
+		padding: 80px 0;
+	}
 
 	.container {
 		display: flex;
 		gap: 52px;
+		@media (max-width: 1100px) {
+			display: block;
+			max-width: 650px;
+		}
 	}
+
+	&__title {
+		display: none;
+		@media (max-width: 1100px) {
+			display: block;
+			margin-bottom: 30px;
+		}
+	}
+
 	&__box {
 		flex: 1 1 48%;
 		height: 585px;
@@ -15,6 +33,13 @@
 		display: flex;
 		align-items: flex-end;
 		justify-content: flex-end;
+		@media (max-width: 1100px) {
+			margin-bottom: 75px;
+		}
+		@media (max-width: 420px) {
+			height: 345px;
+			margin-bottom: 50px;
+		}
 		&::before {
 			content: '';
 			position: absolute;
@@ -32,13 +57,23 @@
 		background: $dark-color;
 		text-align: center;
 		margin-bottom: -50px;
+		@media (max-width: 420px) {
+			max-width: 160px;
+			margin-bottom: -25px;
+			padding: 45px 0;
+		}
 		span {
 			display: inline-block;
+			text-transform: uppercase;
 			color: $white-color;
 			background: rgba($orange-color, .7);
 			padding: 4px 30px 7px;
 			font-size: 1.8rem;
 			position: relative;
+			@media (max-width: 420px) {
+				font-size: 1.2rem;
+				padding: 6px 10px 7px;
+			}
 			&::before, &::after {
 				content: '8X8';
 				font-size: 3rem;
@@ -49,11 +84,19 @@
 				top: -98%;
 				left: 50%;
 				transform: translateX(-50%);
+				@media (max-width: 420px) {
+					font-size: 2rem;
+					top: -60%;
+				}
 			}
 			&::after {
 				content: '5X5';
 				top: auto;
 				bottom: -98%;
+				@media (max-width: 420px) {
+					top: auto;
+					bottom: -60%;
+				}
 			}
 		}
 	}
@@ -62,18 +105,31 @@
 		flex: 1 1 48%;
 	}
 
-	&__title {
+	&__inner-title {
 		margin-bottom: 60px;
+		@media (max-width: 1100px) {
+			display: none;
+		}
 	}
 
 	&__list {
 		line-height: 1.5rem;
+		@media (max-width: 1100px) {
+			margin-bottom: 30px;
+		}
+		@media (max-width: 790px) {
+			line-height: 0.9rem;
+		}
 	}
 
 	&__item {
 		padding-left: 30px;
 		margin-bottom: 20px;
 		position: relative;
+		@media (max-width: 790px) {
+			padding-left: 20px;
+			margin-bottom: 15px;
+		}
 		&::before {
 			content: '';
 			position: absolute;
@@ -83,6 +139,11 @@
 			height: 6px;
 			background: $dark-color;
 			border-radius: 50%;
+			@media (max-width: 790px) {
+				width: 5px;
+				height: 5px;
+				top: 6px;
+			}
 		}
 		span {
 			font-weight: 700;

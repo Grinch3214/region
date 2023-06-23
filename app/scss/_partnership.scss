@@ -51,6 +51,13 @@
 	}
 
 	&__form-input {
+		color: $inputs-color;
+	}
+
+	&__form-checkbox {
+		input {}
+
+		label {}
 	}
 
 	&__form-btn {

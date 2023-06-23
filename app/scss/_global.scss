@@ -36,7 +36,7 @@ body {
 		opacity: .5;
 	}
 	@media (max-width: 790px) {
-		font-size: 0.7em;
+		font-size: 0.7rem;
 	}
 }
 
@@ -47,6 +47,10 @@ body {
 	text-transform: uppercase;
 	padding-top: 32px;
 	position: relative;
+	@media (max-width: 790px) {
+		font-size: 2rem;
+		line-height: 2.1rem;
+	}
 	&::before {
 		position: absolute;
 		content: '';
@@ -77,6 +81,9 @@ body {
 		padding: 2px 0 3px 46px;
 		line-height: 1rem;
 		cursor: pointer;
+		@media (max-width: 790px) {
+			padding-left: 36px;
+		}
 		&::before {
 			content: '';
 			position: absolute;
@@ -114,6 +121,9 @@ body {
 	&__label {
 		display: block;
 		margin-bottom: 14px;
+		@media (max-width: 790px) {
+			font-size: 0.7rem;
+		}
 	}
 
 	&__input {
@@ -124,6 +134,9 @@ body {
 		border: 1px solid #FFF;
 		background: transparent;
 		transition: border-color .2s;
+		@media (max-width: 790px) {
+			font-size: 0.7rem;
+		}
 		&:focus {
 			outline: 0;
 			border-color: $orange-color;
@@ -131,6 +144,9 @@ body {
 		}
 		&::placeholder {
 			color: $light-gray;
+			@media (max-width: 790px) {
+				font-size: 0.7rem;
+			}
 		}
 	}
 }

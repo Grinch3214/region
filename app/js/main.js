@@ -36,3 +36,36 @@
 		toggleClassOnClick(navigation, 'active')
 	})
 })();
+
+(() => {
+	const accordion = document.querySelector('.tournament__accordion')
+	const accordionHeader = document.querySelectorAll('.tournament__accordion-title')
+	// const accordionContent = document.querySelectorAll('.tournament__accordion-content')
+
+	if(accordion) {
+		accordionHeader.forEach((elem, id) => {
+			elem.addEventListener("click", function (event) {
+					let list = this.nextElementSibling;
+					if (!list.style.maxHeight) {
+						elem.classList.add('active');
+						list.style.maxHeight = list.scrollHeight + "px";
+					} else {
+						elem.classList.remove('active');
+						list.style.maxHeight = null;
+					}
+					removeActiveAccordion(id)
+			});
+		});
+	
+		function removeActiveAccordion(inx) {
+			accordionHeader.forEach((element, index) => {
+				if(inx != index) {
+					let lst = element.nextElementSibling;
+					element.classList.remove('active');
+					lst.style.maxHeight = null;
+				}
+			})
+		}
+	}
+})();
+

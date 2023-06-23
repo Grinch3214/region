@@ -6,6 +6,7 @@ body {
 	font-family: 'Roboto';
 	font-weight: 400;
 	color: $dark-color;
+	background: $main-color;
 }
 
 .container {
@@ -82,6 +83,14 @@ body {
 	}
 	span {
 		color: $orange-color;
+	}
+}
+
+.title-centered {
+	display: inline-block;
+	&::before {
+		left: 50%;
+		transform: translateX(-50%);
 	}
 }
 

@@ -5,6 +5,7 @@ html {
 body {
 	font-family: 'Roboto';
 	font-weight: 400;
+	color: $dark-color;
 }
 
 .container {
@@ -31,7 +32,121 @@ body {
 	&:active {
 		background: $active-orange-color;
 	}
+	&:disabled {
+		opacity: .5;
+	}
 	@media (max-width: 790px) {
-		font-size: 0.7em;
+		font-size: 0.7rem;
+	}
+}
+
+.title {
+	font-size: 3rem;
+	line-height: 3.3rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding-top: 32px;
+	position: relative;
+	@media (max-width: 790px) {
+		font-size: 2rem;
+		line-height: 2.1rem;
+	}
+	&::before {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		height: 8px;
+		width: 73px;
+		background: $orange-color;
+	}
+	span {
+		color: $orange-color;
+	}
+}
+
+.custom-checkbox {
+
+	input {
+		position: absolute;
+		z-index: -1;
+		width: 0;
+		height: 0;
+		opacity: 0;
+	}
+
+	label {
+		position: relative;
+		display: block;
+		padding: 2px 0 3px 46px;
+		line-height: 1rem;
+		cursor: pointer;
+		@media (max-width: 790px) {
+			padding-left: 36px;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 22px;
+			height: 22px;
+			border: 1px solid $orange-color;
+		}
+	}
+
+	input:checked + label {
+		&::before {
+			background: $orange-color;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			top: 7px;
+			left: 6px;
+			transform: rotate(-45deg);
+			width: 11px;
+			height: 5px;
+			border-bottom: 2px solid $white-color;
+			border-left: 2px solid $white-color;
+		}
+	}
+}
+
+
+.input-box {
+	font-size: 1rem;
+	color: $white-color;
+
+	&__label {
+		display: block;
+		margin-bottom: 14px;
+		@media (max-width: 790px) {
+			font-size: 0.7rem;
+		}
+	}
+
+	&__input {
+		font-size: 1rem;
+		color: #FFF;
+		padding: 14px 20px;
+		width: 100%;
+		border: 1px solid #FFF;
+		background: transparent;
+		transition: border-color .2s;
+		@media (max-width: 790px) {
+			font-size: 0.7rem;
+		}
+		&:focus {
+			outline: 0;
+			border-color: $orange-color;
+			box-shadow: 0 0 2px 0 $orange-color;
+		}
+		&::placeholder {
+			color: $light-gray;
+			@media (max-width: 790px) {
+				font-size: 0.7rem;
+			}
+		}
 	}
 }

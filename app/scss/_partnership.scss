@@ -1,0 +1,131 @@
+.partnership {
+	padding-top: 140px;
+	line-height: 1.5rem;
+	@media (max-width: 790px) {
+		font-size: 0.7rem;
+		line-height: 0.9rem;
+		padding-top: 80px;
+	}
+	.container {
+		position: relative;
+	}
+
+	&__title {
+		max-width: 520px;
+		margin-bottom: 60px;
+	}
+
+	&__inner {
+		color: $white-color;
+		position: relative;
+		padding: 60px 0;
+		@media (max-width: 1100px) {
+			padding-bottom: 0;
+		}
+		@media (max-width: 790px) {
+			padding-top: 30px;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			inset: 0;
+			margin-left: calc(-50vw + 640px);
+			margin-right: 70px;
+			background: $dark-color;
+			@media (max-width: 1310px) {
+				margin-left: -15px;
+			}
+			@media (max-width: 1100px) {
+				margin-right: -15px;
+				margin-bottom: 40px;
+			}
+		}
+		form {
+			max-width: 520px;
+			@media (max-width: 1210px) {
+				max-width: 430px;
+			}
+			@media (max-width: 1100px) {
+				max-width: 620px;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	&__text {
+		margin-bottom: 32px;
+		text-align: justify;
+	}
+
+	&__group {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		> div {
+			margin-bottom: 20px;
+		}
+		@media (max-width: 790px) {
+			font-size: 0.8rem;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__group-check {
+	}
+
+	&__group-label {
+	}
+
+	&__form {
+		position: absolute;
+		top: -224px;
+		right: 0;
+		max-width: 620px;
+		width: 100%;
+		background: linear-gradient(207deg, rgba(201, 86, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 100%), linear-gradient(50deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 100%), url('../images/partnership-form-bg.jpg'), 50% / cover no-repeat, #C95600;
+		padding: 80px 15px;
+		@media (max-width: 1100px) {
+			position: static;
+		}
+		@media (max-width: 420px) {
+			padding: 30px 15px;
+		}
+	}
+
+	&__container {
+		max-width: 425px;
+		margin: 0 auto;
+		>div {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__form-label {
+	}
+
+	&__form-input {
+		color: $inputs-color;
+	}
+
+	&__form-checkbox {
+		input:checked + label::after {
+			top: 13px;
+		}
+
+		label {
+			font-size: 0.7rem;
+			color: $inputs-color;
+			@media (max-width: 790px) {
+				font-size: 0.6rem;
+			}
+			&::before {
+				border-color: $white-color;
+				top: 6px;
+			}
+		}
+	}
+
+	&__form-btn {
+		width: 100%;
+	}
+}

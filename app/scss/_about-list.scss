@@ -1,0 +1,83 @@
+.about-lists {
+	padding: 140px 0;
+	line-height: 1.5rem;
+	background: #e0e0e0;
+
+	.container {
+		display: flex;
+		gap: 52px;
+		@media (max-width: 1100px) {
+			display: block;
+		}
+	}
+
+	@media (max-width: 790px) {
+		font-size: 0.7rem;
+		line-height: 0.9rem;
+		padding: 80px 0;
+	}
+	&__list {
+		flex: 1 1 48%;
+		&:first-child {
+			@media (max-width: 790px) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	&__list-item {
+		margin-bottom: 10px;
+		padding-left: 30px;
+		position: relative;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		@media (max-width: 790px) {
+			padding-left: 20px;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			top: 12px;
+			left: 0;
+			width: 6px;
+			height: 6px;
+			background: $dark-color;
+			border-radius: 50%;
+			@media (max-width: 790px) {
+				width: 5px;
+				height: 5px;
+				top: 6px;
+			}
+		}
+	}
+
+	&__list-link {
+		padding-right: 16px;
+		position: relative;
+		display: inline-block;
+		@media (max-width: 790px) {
+			padding-right: 12px;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 4px;
+			border-top: 4px solid $orange-color;
+			border-bottom: 4px solid transparent;
+			border-left: 4px solid transparent;
+			border-right: 4px solid $orange-color;
+			transform: rotate(45deg) translateY(-50%);
+			@media (max-width: 790px) {
+				right: 3px;
+				border-width: 3px;
+				top: calc(50% - 2px);
+			}
+		}
+		&:hover::before {
+			border-top-color: $hover-orange-color;
+			border-right-color: $hover-orange-color;
+		}
+	}
+}

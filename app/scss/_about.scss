@@ -67,11 +67,15 @@
 			text-transform: uppercase;
 			color: $white-color;
 			background: rgba($orange-color, .7);
-			padding: 4px 30px 7px;
+			padding: 6px 30px 7px;
 			font-size: 1.8rem;
 			position: relative;
+			@media (max-width: 790px) {
+				line-height: 1.7rem;
+			}
 			@media (max-width: 420px) {
 				font-size: 1.2rem;
+				line-height: 1.3rem;
 				padding: 6px 10px 7px;
 			}
 			&::before, &::after {
@@ -84,16 +88,18 @@
 				top: -98%;
 				left: 50%;
 				transform: translateX(-50%);
+				@media (max-width: 790px) {
+					top: -60%;
+				}
 				@media (max-width: 420px) {
 					font-size: 2rem;
-					top: -60%;
 				}
 			}
 			&::after {
 				content: '5X5';
 				top: auto;
 				bottom: -98%;
-				@media (max-width: 420px) {
+				@media (max-width: 790px) {
 					top: auto;
 					bottom: -60%;
 				}

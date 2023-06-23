@@ -37,6 +37,7 @@ body {
 	padding: 18px 30px;
 	cursor: pointer;
 	font-size: 0.9rem;
+	line-height: 100%;
 	transition: background .2s;
 	&:hover {
 		background: $hover-orange-color;

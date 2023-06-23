@@ -18,7 +18,18 @@ body {
 	overflow: hidden;
 }
 
-.btn {
+.link {
+	color: $orange-color;
+	text-decoration: none;
+	transition: color .2s;
+	&:hover {
+		color: $hover-orange-color;
+	}
+}
+
+.btn, .outline-btn {
+	text-decoration: none;
+	display: inline-block;
 	color: $white-color;
 	background: $orange-color;
 	text-align: center;
@@ -37,6 +48,15 @@ body {
 	}
 	@media (max-width: 790px) {
 		font-size: 0.7rem;
+	}
+}
+
+.outline-btn {
+	background: transparent;
+	border: 1px solid $orange-color;
+	color: $orange-color;
+	&:hover, &:active  {
+		color: $white-color;
 	}
 }
 

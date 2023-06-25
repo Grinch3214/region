@@ -1,0 +1,36 @@
+.partner {
+	padding: 140px 0;
+	line-height: 1.5rem;
+
+	@media (max-width: 790px) {
+		font-size: 0.7rem;
+		line-height: 0.9rem;
+		padding: 80px 0;
+	}
+
+	&__title {
+		margin-bottom: 45px;
+	}
+
+	&__cards {
+		display: flex;
+		flex-flow: wrap;
+		gap: 10px;
+	}
+
+	&__card {
+		flex: 1 1 30%;
+		height: 210px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: $white-color;
+		padding: 0 35px;
+		@media (max-width: 790px) {
+			height: 174px;
+		}
+	}
+
+	&__link {
+	}
+}

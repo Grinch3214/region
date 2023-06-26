@@ -1,0 +1,148 @@
+.contacts {
+	padding: 140px 0;
+	line-height: 1.5rem;
+
+	@media (max-width: 790px) {
+		font-size: 0.7rem;
+		line-height: 0.9rem;
+		padding: 80px 0 112px;
+	}
+
+	&__container {
+		display: flex;
+		position: relative;
+		justify-content: space-between;
+		@media (max-width: 1100px) {
+			display: block;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			z-index: -1;
+			background: $white-color;
+			margin: 0 50px 0 0;
+			@media (max-width: 1100px) {
+				margin: 0 -15px;
+			}
+		}
+	}
+
+	&__inner {
+		align-self: flex-start;
+		color: $dark-color;
+		max-width: 420px;
+		width: 100%;
+	}
+
+	&__title {
+		margin-bottom: 50px;
+		@media (max-width: 790px) {
+			margin-bottom: 32px;
+		}
+	}
+
+	&__addres {
+		padding: 50px 50px 70px;
+		@media (max-width: 1100px) {
+			padding: 32px 32px 0;
+		}
+		@media (max-width: 790px) {
+			padding: 32px 0 0;
+		}
+	}
+
+	&__list {
+	}
+
+	&__list-item {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin-bottom: 32px;
+		@media (max-width: 790px) {
+			margin-bottom: 20px;
+		}
+		a {
+			color: $dark-color;
+			text-decoration: none;
+		}
+		svg {
+			width: 28px;
+			height: 28px;
+			fill: $orange-color;
+		}
+	}
+
+	&__social {
+		display: flex;
+		gap: 24px;
+	}
+
+	&__social-item {
+		a {
+			display: block;
+			svg {
+				fill: #c1c1c1;
+				width: 28px;
+				height: 28px;
+			}
+		}
+	}
+
+	&__form {
+		align-self: flex-start;
+		background: orange;
+		position: relative;
+		margin-top: -148px;
+		max-width: 845px;
+		width: 100%;
+		padding: 0 20px;
+		background: url('../images/partnership-form-bg.jpg') 50%/cover no-repeat;
+		@media (max-width: 1100px) {
+			margin: 0 auto;
+			bottom: -32px;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(207deg, rgba(201, 86, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 100%),linear-gradient(50deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4) 100%);
+		}
+	}
+
+	&__formbox {
+		max-width: 630px;
+		margin: 0 auto;
+		padding: 70px 0;
+		position: relative;
+		>div {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__form-label {
+	}
+
+	&__form-input {
+	}
+
+	&__form-checkbox {
+		color: $white-color;
+	}
+
+	&__form-check {
+		+label {
+			padding-top: 0;
+			font-size: 0.7rem;
+			@media (max-width: 790px) {
+				font-size: 0.6rem;
+				padding-top: 3px;
+			}
+		}
+	}
+
+	&__form-btn {
+		width: 100%;
+	}
+}

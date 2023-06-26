@@ -1,0 +1,94 @@
+.map {
+	padding: 140px 0;
+	line-height: 1.5rem;
+	background: $dark-color;
+	color: $white-color;
+	text-align: center;
+
+	@media (max-width: 790px) {
+		font-size: 0.7rem;
+		line-height: 0.9rem;
+		padding: 80px 0;
+	}
+	
+	&__title {
+		margin-bottom: 60px;
+	}
+
+	&__container {
+		text-align: left;
+		display: flex;
+		flex-flow: wrap;
+		gap: 34px;
+	}
+
+	&__image {
+		flex: 1 1 35%;
+		width: 100%;
+		height: auto;
+	}
+
+	&__inner {
+		flex: 1 1 35%;
+		position: relative;
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 20px;
+			height: 50%;
+			background: linear-gradient(180deg, rgba(28, 28, 28, 0.2) 0%, $dark-color 80%);
+			pointer-events: none;
+		}
+	}
+
+	&__inner-title {
+		font-size: 1.3rem;
+		margin-bottom: 24px;
+		font-weight: 500;
+	}
+
+	&__inner-schedule {
+		padding-right: 20px;
+		height: 340px;
+		overflow: auto;
+		@media (max-width: 790px) {
+			height: 230px;
+		}
+
+		&::-webkit-scrollbar {
+			width: 4px;
+		}
+		&::-webkit-scrollbar-track {
+			background: #353535;
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: $orange-color;
+		}
+
+		// for firefox
+		scrollbar-width: thin;
+    scrollbar-color: $orange-color #ffffff;
+	}
+
+	&__inner-item {
+		margin-bottom: 10px;
+		transition: color .2s;
+		position: relative;
+		padding-left: 14px;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 12px;
+			left: 0;
+			width: 4px;
+			height: 4px;
+			background: $orange-color;
+			border-radius: 50%;
+		}
+		&:hover {
+			color: $hover-orange-color;
+		}
+	}
+}

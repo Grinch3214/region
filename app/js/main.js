@@ -24,17 +24,32 @@
 	const burgerMenu = document.querySelector('.header__burger')
 	const header = document.querySelector('.header')
 	const navigation = document.querySelector('.header__nav')
+	const links = document.querySelectorAll('.header__link')
 
 	const toggleClassOnClick = (selector, nameclass) => {
 		selector.classList.toggle(`${nameclass}`)
 	}
 
+	const closeMenu = () => {
+    toggleClassOnClick(burgerMenu, 'active')
+    toggleClassOnClick(navigation, 'active')
+    toggleClassOnClick(html, 'lock')
+    toggleClassOnClick(header, 'show')
+  }
+
 	burgerMenu.addEventListener('click', () => {
-		toggleClassOnClick(html, 'lock')
-		toggleClassOnClick(burgerMenu, 'active')
-		toggleClassOnClick(header, 'show')
-		toggleClassOnClick(navigation, 'active')
+		closeMenu()
 	})
+
+
+	links.forEach(item => {
+		item.addEventListener('click', (event) => {
+			if(burgerMenu.classList.contains('active') && navigation.classList.contains('active')) {
+				closeMenu()
+			}
+		})
+	})
+	
 })();
 
 (() => {

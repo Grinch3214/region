@@ -82,10 +82,15 @@
 	&__social-item {
 		a {
 			display: block;
+			line-height: 10px;
 			svg {
 				fill: #c1c1c1;
 				width: 28px;
 				height: 28px;
+				transition: fill .2s;
+			}
+			&:hover svg {
+				fill: $hover-orange-color;
 			}
 		}
 	}

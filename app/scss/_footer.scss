@@ -60,6 +60,7 @@
 	}
 
 	&__logo {
+		display: inline-block;
 		align-self: flex-start;
 		img {
 			@media (max-width: 790px) {
@@ -125,6 +126,11 @@
 		a {
 			color: $white-color;
 			text-decoration: none;
+			transition: all .2s;
+			&:hover {
+				color: $hover-orange-color;
+				text-decoration: underline;
+			}
 		}
 	}
 
@@ -154,6 +160,10 @@
 	&__contacts-link {
 		color: $white-color;
 		text-decoration: none;
+		transition: color .2s;
+		&:hover:not(address) {
+			color: $active-orange-color;
+		}
 	}
 
 	&__icons {
@@ -170,6 +180,10 @@
 			fill: #343434;
 			width: 28px;
 			height: 28px;
+			transition: fill .2s;
+			&:hover {
+				fill: $active-orange-color;
+			}
 		}
 	}
 }

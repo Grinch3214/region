@@ -30,10 +30,22 @@
 		@media (max-width: 790px) {
 			min-height: 120px;
 		}
-		img {
-			width: auto;
-			min-width: 150px;
-		}
+
+        img {
+            object-fit: contain;
+            max-height: 210px;
+            min-width: 150px;
+            @media (max-width: 790px) {
+                height: 100px;
+            }
+        }
 	}
 
+	&__link {
+		img {
+			width: 100%;
+			min-width: 150px;
+			height: 100%;
+		}
+	}
 }

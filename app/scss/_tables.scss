@@ -2,6 +2,7 @@
 	padding: 70px 0;
 	height: 100%;
 	color: $dark-color;
+	font-size: 0.9rem;
 
 	&__seasone {
 		margin-bottom: 30px;
@@ -136,13 +137,13 @@
 
 	&__card-video-title {
 		margin-bottom: 6px;
-		font-size: 18px;
+		// font-size: 0.9rem;
 		font-weight: 500;
 	}
 
 	&__card-video-date {
-		margin-bottom: 18px;
-		font-size: 14px;
+		margin-bottom: 0.9rem;
+		font-size: 0.7rem;
 		color: $gray60-color;
 	}
 }
@@ -154,4 +155,82 @@
 
 // !statistics
 .statistics-content {
+
+	&__inner {
+		margin-bottom: 30px;
+	}
+
+	&__title {
+		// font-size: 0.9rem;
+		font-weight: 500;
+		margin-bottom: 15px;
+	}
+
+	&__table {
+		box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.04);
+		gap: 3px;
+		display: flex;
+		flex-flow: column;
+	}
+
+	&__table-title {
+		background: $white-color;
+		padding: 24px;
+		display: flex;
+		justify-content: space-between;
+		color: $gray60-color;
+		// font-size: 0.9rem;
+	}
+
+	&__table-row {
+		padding: 24px;
+	}
 }
+// card row
+.row-statistic {
+	background: $white-color;
+	display: flex;
+	align-items: center;
+
+	&__column {
+		flex: 1 1 90%;
+		display: flex;
+		gap: 24px;
+		align-items: center;
+	}
+
+	&__num {
+		font-weight: 500;
+		flex: 0 1 36px;
+	}
+
+	&__img {
+		flex: 0 0 76px;
+		height: 76px;
+		object-fit: cover;
+		overflow: hidden;
+		border-radius: 50%;
+	}
+
+	&__player {
+	}
+
+	&__player-name {
+		font-weight: 500;
+		margin-bottom: 20px;
+	}
+
+	&__game {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		div {
+			flex: 0 0 40px;
+		}
+	}
+
+	&__goals {
+		font-weight: 500;
+	}
+}
+

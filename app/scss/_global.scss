@@ -9,6 +9,12 @@ body {
 	background: $main-color;
 }
 
+.wrapper {
+	display: flex;
+	flex-flow: column;
+	min-height: 100vh;
+}
+
 .container {
 	max-width: 1310px;
 	margin: 0 auto;
@@ -17,6 +23,11 @@ body {
 
 .lock {
 	overflow: hidden;
+}
+
+.main {
+	flex: 1;
+	padding-top: 161px;
 }
 
 .link {

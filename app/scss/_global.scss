@@ -28,6 +28,11 @@ body {
 .main {
 	flex: 1;
 	padding-top: 161px;
+	background: url('../images/football_top.svg') no-repeat 100% 0 / 1045px 1680px, 
+	url('../images/football_bottom.svg') no-repeat -350px calc(100% + 100px) / 1510px 1170px;
+	@media screen and (max-height: 1720px) {
+		background: url('../images/football_top.svg') no-repeat 100% 0 / 1145px 1780px;
+	}
 }
 
 .link {

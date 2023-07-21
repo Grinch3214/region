@@ -84,3 +84,22 @@
 	}
 })();
 
+// ?TABS
+
+(() => {
+	const tabItem = document.querySelectorAll('.tables__tabs-item')
+	const tabContent = document.querySelectorAll('.tables__tabs-content')
+
+	tabItem.forEach((tab, index) => {
+		tab.addEventListener('click', (e) => {
+			tabContent.forEach(content => {
+				content.classList.remove('active')
+			})
+			tabItem.forEach(tab => {
+				tab.classList.remove('active')
+			})
+			tabItem[index].classList.add('active')
+			tabContent[index].classList.add('active')
+		})
+	})
+})();

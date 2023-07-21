@@ -1,0 +1,157 @@
+.tables {
+	padding: 70px 0;
+	height: 100%;
+	color: $dark-color;
+
+	&__seasone {
+		margin-bottom: 30px;
+	}
+
+	&__title {
+		font-size: 3rem;
+		line-height: 3.3rem;
+		text-transform: uppercase;
+		font-weight: 700;
+		margin-bottom: 2rem;
+	}
+
+	&__inner {
+	}
+
+	&__inner-title {
+		margin-bottom: 1.2rem;
+		font-size: 1.3rem;
+	}
+
+	&__tabs {
+		display: flex;
+		align-items: center;
+		text-align: center;
+		gap: 2px;
+		margin-bottom: 30px;
+	}
+
+	&__tabs-item {
+		flex: 1 1 30%;
+		padding: 24px 10px;
+		background: $white-color;
+		color: $gray60-color;
+		position: relative;
+		cursor: pointer;
+
+		&.active {
+			color: $dark-color;
+			font-weight: 500;
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 3px;
+				background: $orange-color;
+			}
+		}
+	}
+
+	&__tabs-content {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+}
+// !MATCH
+.match-content {
+
+	&__title {
+		margin-bottom: 15px;
+	}
+
+	&__cards {
+		display: flex;
+		gap: 4px;
+		flex-wrap: wrap;
+	}
+
+	&__card {
+		flex: 0 1 calc(50% - 2px);
+		background: #fff;
+		padding: 24px 30px;
+		display: flex;
+	}
+
+	&__card-static {
+		flex: 1 1 65%;
+	}
+
+	&__card-static-item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-right: 10px;
+		color: $gray60-color;
+		position: relative;
+		+ .match-content__card-static-item {
+			margin-top: 40px;
+		}
+
+		&.active {
+			&::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 0;
+				border: 6px solid $dark-color;
+				border-bottom-color: transparent;
+				border-right-color: transparent;
+				transform: rotate(-45deg) translateY(calc(-50% - 3px));
+			}
+			span {
+				color: $dark-color;
+				font-weight: 500;
+			}
+		}
+
+		span:first-child {
+			margin-right: 33px;
+		}
+
+		span:nth-child(2) {
+			flex: 3;
+		}
+
+		span:last-child {
+			flex: 1;
+		}
+	}
+
+	&__card-video {
+		flex: 1 1 35%;
+		padding-left: 24px;
+		border-left: 1px solid #e8e8e8;
+		text-align: center;
+	}
+
+	&__card-video-title {
+		margin-bottom: 6px;
+		font-size: 18px;
+		font-weight: 500;
+	}
+
+	&__card-video-date {
+		margin-bottom: 18px;
+		font-size: 14px;
+		color: $gray60-color;
+	}
+}
+
+
+// !TABLE
+.table-content {
+}
+
+// !statistics
+.statistics-content {
+}

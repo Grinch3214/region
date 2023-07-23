@@ -3,6 +3,9 @@
 	height: 100%;
 	color: $dark-color;
 	font-size: 0.9rem;
+	@media screen and (max-width: 790px) {
+		font-size: 0.7rem;
+	}
 
 	&__seasone {
 		margin-bottom: 30px;
@@ -30,6 +33,7 @@
 		text-align: center;
 		gap: 2px;
 		margin-bottom: 30px;
+		font-size: 0.9rem;
 	}
 
 	&__tabs-item {
@@ -74,6 +78,9 @@
 		display: flex;
 		gap: 4px;
 		flex-wrap: wrap;
+		@media screen and (max-width: 992px) {
+			justify-content: center;
+		}
 	}
 
 	&__card {
@@ -81,6 +88,9 @@
 		background: #fff;
 		padding: 24px 30px;
 		display: flex;
+		@media screen and (max-width: 992px) {
+			flex: 0 1 700px;
+		}
 	}
 
 	&__card-static {
@@ -121,10 +131,12 @@
 
 		span:nth-child(2) {
 			flex: 3;
+			padding-right: 10px;
 		}
 
 		span:last-child {
 			flex: 1;
+			padding-right: 18px;
 		}
 	}
 
@@ -154,6 +166,7 @@
 .table-content {
 
 	&__title {
+		margin-bottom: 15px;
 	}
 	
 	&__box {
@@ -206,7 +219,7 @@
 			}
 			&:nth-child(2) {
 				text-align: left;
-				min-width: 300px;
+				min-width: 200px;
 			}
 		}
 
@@ -261,11 +274,16 @@
 		display: flex;
 		justify-content: space-between;
 		color: $gray60-color;
-		// font-size: 0.9rem;
+		@media screen and (max-width: 790px) {
+			padding: 15px;
+		}
 	}
 
 	&__table-row {
 		padding: 24px;
+		@media screen and (max-width: 790px) {
+			padding: 15px;
+		}
 	}
 }
 // card row
@@ -279,11 +297,17 @@
 		display: flex;
 		gap: 24px;
 		align-items: center;
+		@media screen and (max-width: 790px) {
+			gap: 8px;
+		}
 	}
 
 	&__num {
 		font-weight: 500;
 		flex: 0 1 36px;
+		@media screen and (max-width: 790px) {
+			flex: 0 1 26px;
+		}
 	}
 
 	&__img {
@@ -292,6 +316,10 @@
 		object-fit: cover;
 		overflow: hidden;
 		border-radius: 50%;
+		@media screen and (max-width: 790px) {
+			height: 45px;
+			flex: 0 0 45px;
+		}
 	}
 
 	&__player {
@@ -300,14 +328,29 @@
 	&__player-name {
 		font-weight: 500;
 		margin-bottom: 20px;
+		@media screen and (max-width: 790px) {
+			margin-bottom: 15px;
+		}
 	}
 
 	&__game {
 		display: flex;
 		align-items: center;
 		gap: 20px;
+		@media screen and (max-width: 790px) {
+			gap: 5px;
+		}
 		div {
 			flex: 0 0 40px;
+			@media screen and (max-width: 790px) {
+				flex: 0 0 24px;
+			}
+		}
+		img {
+			height: 32px;
+			@media screen and (max-width: 790px) {
+				height: 24px;
+			}
 		}
 	}
 

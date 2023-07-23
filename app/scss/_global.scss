@@ -33,6 +33,9 @@ body {
 	@media screen and (max-height: 1720px) {
 		background: url('../images/football_top.svg') no-repeat 100% 0 / 1145px 1780px;
 	}
+	@media screen and (max-width: 790px) {
+		padding-top: 95px;
+	}
 }
 
 .link {

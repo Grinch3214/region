@@ -264,6 +264,16 @@
 			}
 		}
 	}
+
+	&__icons {
+		display: flex;
+		justify-content: center;
+		gap: 10px;
+		svg {
+			width: 20px;
+			height: 20px;
+		}
+	}
 }
 
 

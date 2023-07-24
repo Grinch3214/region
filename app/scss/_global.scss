@@ -199,3 +199,10 @@ body {
 		}
 	}
 }
+
+.ytp-large-play-button{
+	@media (max-width: 790px) {
+		width: 28px!important;
+		height: 18px!important;
+	}
+}

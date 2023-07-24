@@ -91,6 +91,10 @@
 		@media screen and (max-width: 992px) {
 			flex: 0 1 700px;
 		}
+		@media screen and (max-width: 790px) {
+			padding: 24px 15px;
+			overflow: auto;
+		}
 	}
 
 	&__card-static {
@@ -118,6 +122,9 @@
 				border-bottom-color: transparent;
 				border-right-color: transparent;
 				transform: rotate(-45deg) translateY(calc(-50% - 3px));
+				@media screen and (max-width: 790px) {
+					border-width: 4px;
+				}
 			}
 			span {
 				color: $dark-color;
@@ -127,6 +134,9 @@
 
 		span:first-child {
 			margin-right: 33px;
+			@media screen and (max-width: 790px) {
+				margin-right: 10px;
+			}
 		}
 
 		span:nth-child(2) {
@@ -145,6 +155,15 @@
 		padding-left: 24px;
 		border-left: 1px solid #e8e8e8;
 		text-align: center;
+		iframe {
+			@media screen and (max-width: 790px) {
+				width: 140px;
+			}
+		}
+		@media screen and (max-width: 790px) {
+			flex: 1 1 25%;
+			padding-left: 8px;
+		}
 	}
 
 	&__card-video-title {
